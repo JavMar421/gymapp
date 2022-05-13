@@ -3,39 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
 
     <LinearLayout
-       android:paddingHorizontal="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingHorizontal="10dp"
         tools:ignore="MissingConstraints">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/textLogin1"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="35dp"
-            android:text="Login" />
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/_226693"/>
+
+            <TextView
+                android:id="@+id/textLogin1"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Login"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:layout_margin="17dp"
                 android:id="@+id/textLogin2"
-                android:layout_width="wrap_content"
-                android:textColor="@color/black"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="17dp"
                 android:layout_weight="1"
-                android:text="E-Mail:" />
+                android:text="E-Mail:"
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/textEmail"
@@ -46,27 +57,29 @@
                 android:inputType="textEmailAddress"
                 android:text="" />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/textLogin3"
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Contraseña:" />
-        <EditText
-            android:id="@+id/textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:text=""
-            />
-    </LinearLayout>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textLogin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Contraseña:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textoErrorLogin"
@@ -76,6 +89,7 @@
             android:text="@string/defaulterror"
             android:textColor="#ED3B3B"
             android:visibility="invisible" />
+
         <Switch
             android:id="@+id/switchRecordarUsuario"
             android:layout_width="wrap_content"
@@ -83,31 +97,32 @@
             android:layout_weight="1"
             android:text="Recordar"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
-        <LinearLayout
-            android:layout_margin="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <Button
-            android:id="@+id/botonEnviarLogin"
-            android:layout_width="85dp"
-            android:layout_height="45dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="10dp"
-            android:backgroundTint="#ED3B3B"
-            android:text="Acceder"
-            />
-        <Button
-            android:id="@+id/botonRegister"
-            android:layout_width="120dp"
-            android:layout_height="45dp"
-            android:layout_margin="1dp"
-            android:textSize="10dp"
-            android:backgroundTint="#ED3B3B"
-            android:text="Crear Cuenta"
-            />
-        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/botonEnviarLogin"
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#ED3B3B"
+                android:text="Acceder"
+                android:textSize="10dp" />
+
+            <Button
+                android:onClick="a"
+                android:id="@+id/botonRegister"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_margin="1dp"
+                android:backgroundTint="#ED3B3B"
+                android:text="Crear Cuenta"
+                android:textSize="10dp" />
+        </LinearLayout>
 
 
     </LinearLayout>

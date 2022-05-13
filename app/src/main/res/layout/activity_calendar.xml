@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/BotonTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#ED3B3B"
+        android:text="Table"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/BotonCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#ED3B3B"
+        android:text="Calendar"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="594dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/BotonLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#ED3B3B"
+        android:text="Log Out"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="659dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

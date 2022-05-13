@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/acivity_table.xml" value="0.27717391304347827" />
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_calendar.xml" value="0.27717391304347827" />
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_index.xml" value="0.27717391304347827" />
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_settings.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/acivity_table.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_calendar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_index.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_main.xml" value="0.32454361054766734" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_settings.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_table.xml" value="0.33" />
       </map>
     </option>
   </component>
