@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp">
+    android:layout_margin="20dp"
+    tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,7 +80,7 @@
                 android:text="" />
 
             <TextView
-                android:id="@+id/textoErrorLogin"
+                android:id="@+id/textoErrorLogin2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"
@@ -102,20 +103,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/botonEnviarLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:backgroundTint="#ED3B3B"
-                android:text="@string/acceder"
-                android:textSize="10dp" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/botonRegister"
