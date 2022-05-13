@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Gymapp</string>
-    <string name="defaulterror">Error</string>
-    <string name="mailerror">Error: E-Mail Incorrecto</string>
-    <string name="mailerror2">Error: Contraseña Sencilla</string>
-    <string name="passerror">Error: Contraseña Incorrecta</string>
-    <string name="passerror2">Error: E-Mail ya en Uso</string>
+    <string name="error_default">Error: Default</string>
+    <string name="error_login_mail">Error: E-Mail Incorrecto</string>
+    <string name="error_register_pass">Error: Contraseña Sencilla</string>
+    <string name="error_login_pass">Error: Contraseña Incorrecta</string>
+    <string name="error_register_mail">Error: E-Mail ya en Uso</string>
+    <string name="error_register_mail2">Error: Dirección Incorrecta</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="acceder">Acceder</string>
 </resources>

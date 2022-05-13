@@ -1,29 +1,14 @@
 package com.example.gymapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import com.example.gymapp.databinding.ActivityLoginBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.gymapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
-
-    //private val viewModel: ActivityMainViewModel by viewModels()
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(3000)
-
-            setContentView(R.layout.activity_login)
-
-        }
-
-
-
     }
 
 }
