@@ -20,7 +20,7 @@ class MainLogin : AppCompatActivity() {
             CoroutineScope(Dispatchers.Main).launch {
                 print("...esperando...")
                 delay(1000)
-                setContentView(R.layout.activity_index)
+                launch {  }
             }
         }
 
