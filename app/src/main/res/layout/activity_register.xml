@@ -20,7 +20,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/_226693"/>
+                app:srcCompat="@drawable/logogym"/>
             <TextView
                 android:id="@+id/textRegister1"
                 android:textAlignment="center"

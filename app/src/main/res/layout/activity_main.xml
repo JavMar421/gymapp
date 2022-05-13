@@ -10,7 +10,6 @@
         android:id="@+id/Logotipo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#009F2727"
-        app:srcCompat="@drawable/_226693"
+        app:srcCompat="@drawable/logogym"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
