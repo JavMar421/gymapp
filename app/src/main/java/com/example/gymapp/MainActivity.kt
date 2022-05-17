@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gymapp.databinding.ActivityMainBinding
+//import com.example.gymapp.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -20,7 +20,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    //lateinit var binding: ActivityMainBinding
     @RequiresApi(Build.VERSION_CODES.M)
     var auth: FirebaseAuth = Firebase.auth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,14 +49,12 @@ class MainActivity : AppCompatActivity() {
         enviar.setOnClickListener() {
             error.text="Error: "
             error.visibility= View.INVISIBLE
-            var vacio=false
             if (email.text.toString().isEmpty()&& pass.text.toString().isEmpty()){
                 error.text=error.text.toString()+"Elemento Vacío "
                 error.visibility= View.VISIBLE
-                vacio=false
+
             }
-            else{vacio=true}
-            if(vacio) {
+            else{
                 auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
