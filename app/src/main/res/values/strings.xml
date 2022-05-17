@@ -1,11 +1,23 @@
 <resources>
     <string name="app_name">Gymapp</string>
     <string name="error_default">Error: Default</string>
-    <string name="error_login_mail">Error: E-Mail Incorrecto</string>
+    <string name="error_login">Invalid Login or password</string>
+    <string name="error_register_pass2">Error: Contraseña no Igual</string>
     <string name="error_register_pass">Error: Contraseña Sencilla</string>
-    <string name="error_login_pass">Error: Contraseña Incorrecta</string>
     <string name="error_register_mail">Error: E-Mail ya en Uso</string>
     <string name="error_register_mail2">Error: Dirección Incorrecta</string>
     <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="iniciar_boton">Iniciar Sesion</string>
     <string name="acceder">Acceder</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
