@@ -68,8 +68,10 @@ class RegisterActivity : AppCompatActivity() {
                         val user = auth.currentUser
                         updateUI(user)
                     } else {
+                        error.visibility = View.VISIBLE
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                        error.text= error.text.toString()+"Email ya en uso "
                         Toast.makeText(baseContext, "Authentication failed.",
                             Toast.LENGTH_SHORT).show()
                         updateUI(null)
