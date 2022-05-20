@@ -13,7 +13,6 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.gymapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -24,7 +23,6 @@ import java.net.PasswordAuthentication
 import kotlin.concurrent.timer
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var binding: ActivityRegisterBinding
     var auth: FirebaseAuth = Firebase.auth
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {

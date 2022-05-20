@@ -19,6 +19,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+public var cosa = ""
+public var cosa2 = ""
 class MainActivity : AppCompatActivity() {
     //lateinit var binding: ActivityMainBinding
     @RequiresApi(Build.VERSION_CODES.M)
@@ -67,6 +69,14 @@ class MainActivity : AppCompatActivity() {
                             ).show()
                             val user = auth.currentUser
                             updateUI(user)
+
+                            if (recordar.isChecked){
+                                Toast.makeText(this,"Usuario Guardado",Toast.LENGTH_SHORT).show()
+                                cosa=email.text.toString()
+                                cosa2=pass.text.toString()
+                                val intent = Intent(this, TableActivity::class.java)
+                                startActivity(intent)
+                            }
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
@@ -81,11 +91,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
             }
-            if (recordar.isChecked){
-                Toast.makeText(this,"Usuario Guardado",Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, TableActivity::class.java)
-                startActivity(intent)
-            }
+
 
 
         }
