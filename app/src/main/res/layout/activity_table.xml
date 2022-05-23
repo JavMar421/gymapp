@@ -6,6 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TableActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/logoGrande"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logogym2"
+            android:visibility="gone" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -92,7 +104,7 @@
                                 android:id="@+id/seriesejer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3"
+                                android:text=" "
                                 android:textColor="@color/black"
                                 android:textAlignment="center"
                                 android:textSize="25dp" />
@@ -123,7 +135,7 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="15"
+                                android:text=" "
                                 android:textAlignment="center"
                                 android:textSize="25dp" />
                         </LinearLayout>
@@ -154,7 +166,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:text="10"
+                                android:text=" "
                                 android:textAlignment="center"
                                 android:textSize="25dp" />
                         </LinearLayout>
@@ -201,5 +213,5 @@
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

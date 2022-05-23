@@ -65,7 +65,9 @@ class MainActivity : AppCompatActivity() {
                                 cosa=email.text.toString()
                                 cosa2=pass.text.toString()
                             }
-                            val intent = Intent(this, TableActivity::class.java)
+
+                            var intent = Intent(this, TableActivity::class.java)
+                            if (email.text.contains("admin")){intent= Intent(this, TableCreator::class.java)}
                             startActivity(intent)
                         } else {
                             // If sign in fails, display a message to the user.

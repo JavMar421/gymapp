@@ -3,12 +3,17 @@ package com.example.gymapp
 
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class TableActivity :AppCompatActivity() {
 
@@ -27,10 +32,17 @@ class TableActivity :AppCompatActivity() {
         var peso = findViewById<TextView>(R.id.pesoejer)
         var series = findViewById<TextView>(R.id.seriesejer)
         var repeticiones = findViewById<TextView>(R.id.repesejer)
+        val logoGrande = findViewById<ImageView>(R.id.logoGrande)
         val mediaController: MediaController = MediaController(this)
         var num=1
-
         mediaController.setAnchorView(videoView)
+
+        logoGrande.visibility = View.VISIBLE
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(1000)
+            logoGrande.visibility = View.GONE
+
+        }
 
         linearvideo.setOnClickListener {
             if(videoView.isPlaying) {
@@ -41,19 +53,19 @@ class TableActivity :AppCompatActivity() {
             }
         }
 
-        database.reference.child("ejercicio").child("ejercicio"+num).child("nombre").get().addOnSuccessListener{
+        database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
             ejernombre.text=it.value.toString()
         }
-        database.reference.child("ejercicio").child("ejercicio"+num).child("peso").get().addOnSuccessListener{
+        database.reference.child("ejercicio").child("$num").child("peso").get().addOnSuccessListener{
             peso.text=it.value.toString()
         }
-        database.reference.child("ejercicio").child("ejercicio"+num).child("reps").get().addOnSuccessListener{
+        database.reference.child("ejercicio").child("$num").child("reps").get().addOnSuccessListener{
             repeticiones.text=it.value.toString()
         }
-        database.reference.child("ejercicio").child("ejercicio"+num).child("serie").get().addOnSuccessListener{
+        database.reference.child("ejercicio").child("$num").child("serie").get().addOnSuccessListener{
             series.text=it.value.toString()
         }
-        database.reference.child("ejercicio").child("ejercicio"+num).child("video").get().addOnSuccessListener{
+        database.reference.child("ejercicio").child("$num").child("video").get().addOnSuccessListener{
             videoView.setVideoPath(it.value.toString())
         }
 
@@ -61,19 +73,19 @@ class TableActivity :AppCompatActivity() {
             num++
             if (num>9 || num<0){num=0}
 
-            database.reference.child("ejercicio").child("ejercicio"+num).child("nombre").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
                 ejernombre.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("peso").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("peso").get().addOnSuccessListener{
                 peso.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("reps").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("reps").get().addOnSuccessListener{
                 repeticiones.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("serie").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("serie").get().addOnSuccessListener{
                 series.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("video").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("video").get().addOnSuccessListener{
                 videoView.setVideoPath(it.value.toString())
             }
 
@@ -82,19 +94,19 @@ class TableActivity :AppCompatActivity() {
             num--
             if (num<0||num>9){num=9}
 
-            database.reference.child("ejercicio").child("ejercicio"+num).child("nombre").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
                 ejernombre.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("peso").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("peso").get().addOnSuccessListener{
                 peso.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("reps").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("reps").get().addOnSuccessListener{
                 repeticiones.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("serie").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("serie").get().addOnSuccessListener{
                 series.text=it.value.toString()
             }
-            database.reference.child("ejercicio").child("ejercicio"+num).child("video").get().addOnSuccessListener{
+            database.reference.child("ejercicio").child("$num").child("video").get().addOnSuccessListener{
                 videoView.setVideoPath(it.value.toString())
             }
         }
