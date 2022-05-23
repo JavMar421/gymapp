@@ -13,7 +13,5 @@ class RecyclerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recycler_view)
 
-        val recy = findViewById<RecyclerView>(R.id.recicler)
-        recy.adapter
     }
 }

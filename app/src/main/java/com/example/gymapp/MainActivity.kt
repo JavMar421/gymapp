@@ -46,15 +46,12 @@ class MainActivity : AppCompatActivity() {
             logoGrande.visibility = View.GONE
 
         }
-
-
         enviar.setOnClickListener() {
             error.text="Error: "
             error.visibility= View.INVISIBLE
-            if (email.text.toString().isEmpty()&& pass.text.toString().isEmpty()){
+            if (email.text.toString().isEmpty() || pass.text.toString().isEmpty()){
                 error.text=error.text.toString()+"Elemento Vacío "
                 error.visibility= View.VISIBLE
-
             }
             else{
                 auth.signInWithEmailAndPassword(email.text.toString(), pass.text.toString())
@@ -62,31 +59,17 @@ class MainActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success")
-                            Toast.makeText(
-                                baseContext,
-                                "Authentication succes.",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            val user = auth.currentUser
-                            updateUI(user)
-
                             if (recordar.isChecked){
                                 Toast.makeText(this,"Usuario Guardado",Toast.LENGTH_SHORT).show()
+                                
                                 cosa=email.text.toString()
                                 cosa2=pass.text.toString()
-                                val intent = Intent(this, TableActivity::class.java)
-                                startActivity(intent)
                             }
+                            val intent = Intent(this, TableActivity::class.java)
+                            startActivity(intent)
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
-                            error.text = error.text.toString() + "Invalid Login or password "
-                            error.visibility = View.VISIBLE
-                            Toast.makeText(
-                                baseContext,
-                                "Authentication failed.",
-                                Toast.LENGTH_SHORT
-                            ).show()
                             updateUI(null)
                         }
                     }
