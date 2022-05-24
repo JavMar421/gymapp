@@ -42,21 +42,34 @@
 
                         <ImageView
                             android:id="@+id/logo"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_gravity="center"
                             app:srcCompat="@drawable/logogym2" />
-
+                        <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
                         <TextView
                             android:id="@+id/nombreejer"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="5dp"
                             android:text="Ejercicio"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="35dp" />
+                            android:textSize="30dp" />
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/logoutlogo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/logout" />
                     </LinearLayout>
 
 

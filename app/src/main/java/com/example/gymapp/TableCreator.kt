@@ -18,6 +18,7 @@ class TableCreator :AppCompatActivity() {
         var Cancelar = findViewById<Button>(R.id.Cancelar)
         var Aplicar = findViewById<Button>(R.id.Aplicar)
         val Usuario = findViewById<EditText>(R.id.textusuario)
+        val logout = findViewById<ImageView>(R.id.logoutlogo)
         var num=0
         val ch1 = findViewById<CheckBox>(R.id.checkBox1)
         val ch2 = findViewById<CheckBox>(R.id.checkBox2)
@@ -41,7 +42,11 @@ class TableCreator :AppCompatActivity() {
         val c9 = findViewById<Button>(R.id.ejer9)
         val c0 = findViewById<Button>(R.id.ejer0)
         var lista: MutableList<String> = mutableListOf()
-
+        logout.setOnClickListener{
+            Toast.makeText(this,"$saveuser ha Cerrado la Sesión",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         c1.setOnClickListener {
             ch1.isChecked = ch1.isChecked != true
         }
@@ -92,46 +97,64 @@ class TableCreator :AppCompatActivity() {
 
         Cancelar.setOnClickListener {
             Toast.makeText(this,"Operación Cancelada",Toast.LENGTH_SHORT).show()
-            var intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
-        Aplicar.setOnClickListener{
-            if (ch1.isChecked){
-                lista.add("1")}
-            if (ch2.isChecked){
-                lista.add("2")}
-            if (ch3.isChecked){
-                lista.add("3")}
-            if (ch4.isChecked){
-                lista.add("4")}
-            if (ch5.isChecked){
-                lista.add("5")}
-            if (ch6.isChecked){
-                lista.add("6")}
-            if (ch7.isChecked){
-                lista.add("7")}
-            if (ch8.isChecked){
-                lista.add("8")}
-            if (ch9.isChecked){
-                lista.add("9")}
-            if (ch0.isChecked){
-                lista.add("0")}
-
-            database.reference.child("usuarios").child(Usuario.text.toString())
-
-            for(i in 0..10){
-                if (lista.contains("$num")){
-                    Toast.makeText(this,"Se ha creado la Tabla de ${Usuario.text}",Toast.LENGTH_SHORT).show()
-                    database.reference.child("usuarios").child(Usuario.text.toString()).child("$num").setValue("$num")
-                }
-                num++
-            }
             var intent = Intent(this, TableCreator::class.java)
             startActivity(intent)
         }
 
+        Aplicar.setOnClickListener {
+            if (Usuario.text.toString().isEmpty()) {
+                Toast.makeText(this, "Seleccione un Usuario", Toast.LENGTH_SHORT).show()
+            } else {
+                if (ch1.isChecked) {
+                    lista.add("1")
+                }
+                if (ch2.isChecked) {
+                    lista.add("2")
+                }
+                if (ch3.isChecked) {
+                    lista.add("3")
+                }
+                if (ch4.isChecked) {
+                    lista.add("4")
+                }
+                if (ch5.isChecked) {
+                    lista.add("5")
+                }
+                if (ch6.isChecked) {
+                    lista.add("6")
+                }
+                if (ch7.isChecked) {
+                    lista.add("7")
+                }
+                if (ch8.isChecked) {
+                    lista.add("8")
+                }
+                if (ch9.isChecked) {
+                    lista.add("9")
+                }
+                if (ch0.isChecked) {
+                    lista.add("0")
+                }
 
+                database.reference.child("usuarios").child(Usuario.text.toString())
+
+                for (i in 0..10) {
+                    if (lista.contains("$num")) {
+                        Toast.makeText(
+                            this,
+                            "Se ha creado la Tabla de ${Usuario.text}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        database.reference.child("usuarios").child(Usuario.text.toString())
+                            .child("$num").setValue("$num")
+                    }
+                    num++
+                }
+                var intent = Intent(this, TableCreator::class.java)
+                startActivity(intent)
+            }
+
+        }
     }
 }
 

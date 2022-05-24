@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -16,19 +16,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:tabMode="scrollable">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabla"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tabla" />
-
+            app:tabMode="scrollable"
+            >
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/calendario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calendario" />
+                android:text="Calendario"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tabla"/>
+
+
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/chat"
