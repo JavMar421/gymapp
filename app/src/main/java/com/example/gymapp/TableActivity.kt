@@ -1,6 +1,7 @@
 package com.example.gymapp
 
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -32,11 +33,13 @@ class TableActivity :AppCompatActivity() {
         var series = findViewById<TextView>(R.id.seriesejer)
         var repeticiones = findViewById<TextView>(R.id.repesejer)
         val logoGrande = findViewById<ImageView>(R.id.logoGrande)
+        val logout = findViewById<ImageView>(R.id.logoutlogo)
         val mediaController: MediaController = MediaController(this)
         var num=1
         var check=""
         var lista: MutableList<String> = mutableListOf()
         mediaController.setAnchorView(videoView)
+
 
         //Pantalla de Carga
         logoGrande.visibility = View.VISIBLE
@@ -44,6 +47,12 @@ class TableActivity :AppCompatActivity() {
             delay(1000)
             logoGrande.visibility = View.GONE
             siguiente.callOnClick()
+        }
+
+        logout.setOnClickListener{
+            Toast.makeText(this,"$saveuser ha Cerrado la Sesión",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         linearvideo.setOnClickListener {
