@@ -35,7 +35,7 @@ class TableActivity :AppCompatActivity() {
         val logoGrande = findViewById<ImageView>(R.id.logoGrande)
         val logout = findViewById<ImageView>(R.id.logoutlogo)
         val mediaController: MediaController = MediaController(this)
-        var num=1
+        var num=0
         var check=""
         var lista: MutableList<String> = mutableListOf()
         mediaController.setAnchorView(videoView)
@@ -44,13 +44,20 @@ class TableActivity :AppCompatActivity() {
         //Pantalla de Carga
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
-            delay(1000)
-            logoGrande.visibility = View.GONE
-            siguiente.callOnClick()
+            delay(1500)
+            if (lista.isEmpty()){
+                delay(3000)
+                nodata()
+                delay(2000)
+                logout.callOnClick()
+            }else {
+                logoGrande.visibility = View.GONE
+                siguiente.callOnClick()
+            }
         }
 
         logout.setOnClickListener{
-            Toast.makeText(this,"$saveuser ha Cerrado la Sesión",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Cerrando Sesión",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -65,16 +72,19 @@ class TableActivity :AppCompatActivity() {
         }
 
         //Lectura de Datos de Usuario
+
         for (i in 0..9){
             database.reference.child("usuarios").child(saveuser).child("$i").get().addOnSuccessListener {
                 if (it.value != null) {
                     check=it.value.toString()
+
                     if (!lista.contains(check)) {
                         lista.add(check)
                     }
-                }
-            }}
 
+                }
+            }
+        }
         siguiente.setOnClickListener{
             do {
                 num++
@@ -127,5 +137,9 @@ class TableActivity :AppCompatActivity() {
                 videoView.setVideoPath(it.value.toString())
             }
         }
+    }
+
+    private fun nodata() {
+        Toast.makeText(this,"$saveuser no tiene Datos, contacta con un Administrador",Toast.LENGTH_SHORT).show()
     }
 }

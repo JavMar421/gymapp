@@ -62,9 +62,13 @@ class RegisterActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "createUserWithEmail:success")
-                        Toast.makeText(baseContext, "Authentication succes.", Toast.LENGTH_SHORT).show()
+                        saveuser= email.text.toString().substringBefore("@")
+                        Toast.makeText(baseContext, "Usuario $saveuser creado", Toast.LENGTH_SHORT).show()
                         val user = auth.currentUser
                         updateUI(user)
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+
                     } else {
                         error.visibility = View.VISIBLE
                         // If sign in fails, display a message to the user.
