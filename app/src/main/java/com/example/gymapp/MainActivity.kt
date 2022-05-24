@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-//import com.example.gymapp.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -19,8 +18,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-public var cosa = ""
-public var cosa2 = ""
+public var savemail = ""
+public var savepass = ""
+public var saveuser = ""
 class MainActivity : AppCompatActivity() {
     //lateinit var binding: ActivityMainBinding
     @RequiresApi(Build.VERSION_CODES.M)
@@ -58,18 +58,22 @@ class MainActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
+                            saveuser= email.text.toString().substringBefore("@")
                             Log.d(TAG, "signInWithEmail:success")
+
                             if (recordar.isChecked){
-                                Toast.makeText(this,"Usuario Guardado",Toast.LENGTH_SHORT).show()
-                                
-                                cosa=email.text.toString()
-                                cosa2=pass.text.toString()
+                                savemail=email.text.toString()
+                                savepass=pass.text.toString()
+
+                                Toast.makeText(this,"$saveuser guardado",Toast.LENGTH_SHORT).show()
                             }
 
                             var intent = Intent(this, TableActivity::class.java)
                             if (email.text.contains("admin")){intent= Intent(this, TableCreator::class.java)}
                             startActivity(intent)
                         } else {
+                            error.text=error.text.toString()+" Usuario o Contraseña Incorrectos "
+                            error.visibility= View.VISIBLE
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
                             updateUI(null)

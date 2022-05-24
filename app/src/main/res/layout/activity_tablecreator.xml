@@ -349,7 +349,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:backgroundTint="#ED3B3B"
-                        android:text="Cancelar"
+                        android:text="Volver"
                         android:textSize="20dp" />
 
                     <Space

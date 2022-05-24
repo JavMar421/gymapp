@@ -92,7 +92,7 @@ class TableCreator :AppCompatActivity() {
 
         Cancelar.setOnClickListener {
             Toast.makeText(this,"Operación Cancelada",Toast.LENGTH_SHORT).show()
-            var intent = Intent(this, TableCreator::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -123,7 +123,7 @@ class TableCreator :AppCompatActivity() {
             for(i in 0..10){
                 if (lista.contains("$num")){
                     Toast.makeText(this,"Se ha creado la Tabla de ${Usuario.text}",Toast.LENGTH_SHORT).show()
-                    database.reference.child("usuarios").child(Usuario.text.toString()).child("ejer $num").setValue("$num")
+                    database.reference.child("usuarios").child(Usuario.text.toString()).child("$num").setValue("$num")
                 }
                 num++
             }

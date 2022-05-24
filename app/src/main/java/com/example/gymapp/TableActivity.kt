@@ -23,7 +23,6 @@ class TableActivity :AppCompatActivity() {
         setContentView(R.layout.activity_table)
 
         val database = Firebase.database("https://gym-proyect-dam-default-rtdb.europe-west1.firebasedatabase.app")
-
         var siguiente = findViewById<Button>(R.id.Siguiente)
         var anterior = findViewById<Button>(R.id.Anterior)
         var ejernombre = findViewById<TextView>(R.id.nombreejer)
@@ -35,13 +34,16 @@ class TableActivity :AppCompatActivity() {
         val logoGrande = findViewById<ImageView>(R.id.logoGrande)
         val mediaController: MediaController = MediaController(this)
         var num=1
+        var check=""
+        var lista: MutableList<String> = mutableListOf()
         mediaController.setAnchorView(videoView)
 
+        //Pantalla de Carga
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
             logoGrande.visibility = View.GONE
-
+            siguiente.callOnClick()
         }
 
         linearvideo.setOnClickListener {
@@ -53,25 +55,24 @@ class TableActivity :AppCompatActivity() {
             }
         }
 
-        database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
-            ejernombre.text=it.value.toString()
-        }
-        database.reference.child("ejercicio").child("$num").child("peso").get().addOnSuccessListener{
-            peso.text=it.value.toString()
-        }
-        database.reference.child("ejercicio").child("$num").child("reps").get().addOnSuccessListener{
-            repeticiones.text=it.value.toString()
-        }
-        database.reference.child("ejercicio").child("$num").child("serie").get().addOnSuccessListener{
-            series.text=it.value.toString()
-        }
-        database.reference.child("ejercicio").child("$num").child("video").get().addOnSuccessListener{
-            videoView.setVideoPath(it.value.toString())
-        }
+        //Lectura de Datos de Usuario
+        for (i in 0..9){
+            database.reference.child("usuarios").child(saveuser).child("$i").get().addOnSuccessListener {
+                if (it.value != null) {
+                    check=it.value.toString()
+                    if (!lista.contains(check)) {
+                        lista.add(check)
+                    }
+                }
+            }}
 
         siguiente.setOnClickListener{
-            num++
-            if (num>9 || num<0){num=0}
+            do {
+                num++
+                if (num>9){num=0}
+            }
+            while(!lista.contains("$num"))
+
 
             database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
                 ejernombre.text=it.value.toString()
@@ -89,10 +90,17 @@ class TableActivity :AppCompatActivity() {
                 videoView.setVideoPath(it.value.toString())
             }
 
+
+
+
         }
+
         anterior.setOnClickListener{
-            num--
-            if (num<0||num>9){num=9}
+            do {
+                num--
+                if (num<0){num=9}
+            }
+            while(!lista.contains("$num"))
 
             database.reference.child("ejercicio").child("$num").child("nombre").get().addOnSuccessListener{
                 ejernombre.text=it.value.toString()
