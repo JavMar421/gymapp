@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/logogym2"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

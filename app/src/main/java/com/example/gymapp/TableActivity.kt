@@ -21,7 +21,6 @@ class TableActivity :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_table)
-
         val database = Firebase.database("https://gym-proyect-dam-default-rtdb.europe-west1.firebasedatabase.app")
         val siguiente = findViewById<Button>(R.id.Siguiente)
         val anterior = findViewById<Button>(R.id.Anterior)

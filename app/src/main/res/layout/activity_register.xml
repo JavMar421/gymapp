@@ -14,12 +14,6 @@
         android:paddingHorizontal="10dp"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/logoGrande"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/logogym"
-            android:visibility="gone" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +22,7 @@
             android:padding="10dp">
 
             <ImageView
+                android:contentDescription="@string/app_name"
                 android:id="@+id/logo"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -36,14 +31,14 @@
 
             <TextView
                 android:id="@+id/textLogin1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="Register"
+                android:text="@string/registro"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="35dp" />
+                android:textSize="35sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,31 +48,34 @@
             android:padding="10dp">
 
             <EditText
+                android:autofillHints="emailAddress"
                 android:id="@+id/textEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="12"
-                android:hint="E-mail"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:text="" />
 
             <EditText
+                android:autofillHints="password"
                 android:id="@+id/textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="12"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:text="" />
             <EditText
+                android:autofillHints="password"
                 android:id="@+id/repeatPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="12"
-                android:hint="Repeat Password"
+                android:hint="@string/repearpassword"
                 android:inputType="textPassword"
                 android:text="" />
 
@@ -95,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Recordar"
+                android:text="@string/recordar"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         </LinearLayout>
@@ -114,9 +112,9 @@
                 android:layout_margin="1dp"
                 android:backgroundTint="#ED3B3B"
                 android:text="@string/crear_cuenta"
-                android:textSize="10dp" />
+                android:textSize="12sp" />
             <Space
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
@@ -127,7 +125,7 @@
                 android:layout_margin="1dp"
                 android:backgroundTint="#ED3B3B"
                 android:text="@string/iniciar_boton"
-                android:textSize="10dp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
 

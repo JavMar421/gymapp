@@ -1,5 +1,6 @@
 package com.example.gymapp
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
@@ -10,12 +11,12 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
-    var auth: FirebaseAuth = Firebase.auth
+    private var auth: FirebaseAuth = Firebase.auth
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,8 +62,7 @@ class RegisterActivity : AppCompatActivity() {
                         Log.d(TAG, "createUserWithEmail:success")
                         saveuser= email.text.toString().substringBefore("@")
                         Toast.makeText(baseContext, "Usuario $saveuser creado", Toast.LENGTH_SHORT).show()
-                        val user = auth.currentUser
-                        updateUI(user)
+
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
 
@@ -73,7 +73,6 @@ class RegisterActivity : AppCompatActivity() {
                         error.text= error.text.toString()+"Email ya en uso "
                         Toast.makeText(baseContext, "Authentication failed.",
                             Toast.LENGTH_SHORT).show()
-                        updateUI(null)
                     }
                 }
             }
@@ -84,8 +83,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    fun updateUI(user: FirebaseUser?) {
-    }
+
 
 
 }

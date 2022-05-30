@@ -1,5 +1,6 @@
 package com.example.gymapp
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
@@ -10,7 +11,6 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
@@ -23,7 +23,9 @@ import kotlinx.coroutines.launch
 var saveuser = ""
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
+    @SuppressLint("SetTextI18n")
     var auth: FirebaseAuth = Firebase.auth
+    @SuppressLint("SetTextI18n", "UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
@@ -31,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val logoGrande = findViewById<ImageView>(R.id.logoGrande)
-        val logo = findViewById<ImageView>(R.id.logo)
         val email = findViewById<EditText>(R.id.textEmail)
         val pass = findViewById<EditText>(R.id.textPassword)
         val enviar = findViewById<Button>(R.id.botonEnviarLogin)
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                             error.visibility= View.VISIBLE
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
-                            updateUI(null)
+
                         }
                     }
             }
@@ -90,10 +91,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    fun updateUI(user: FirebaseUser?) {
-
-    }
-
 
 }
 

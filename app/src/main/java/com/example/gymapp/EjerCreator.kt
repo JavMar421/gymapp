@@ -4,16 +4,11 @@ package com.example.gymapp
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 class EjerCreator :AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?)  {
@@ -31,8 +26,8 @@ class EjerCreator :AppCompatActivity() {
         val edittable = findViewById<ImageView>(R.id.tablaicon)
         val editejer = findViewById<ImageView>(R.id.ejericon)
         val calendar = findViewById<ImageView>(R.id.calendaricon)
+        var dato:String
 
-        var dato=""
         logout.setOnClickListener{
             Toast.makeText(this,"Cerrando Sesion",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)

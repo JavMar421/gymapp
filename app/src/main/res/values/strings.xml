@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Gymapp</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="recordar">Recordar</string>
+    <string name="login">Login</string>
     <string name="error_default">Error: </string>
     <string name="error_login">Invalid Login or password</string>
     <string name="error_register_pass2">Error: Contraseña no Igual</string>
@@ -16,8 +20,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="registro">Register</string>
+    <string name="repearpassword">Repeat Password</string>
 </resources>

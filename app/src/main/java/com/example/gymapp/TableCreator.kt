@@ -43,7 +43,7 @@ class TableCreator :AppCompatActivity() {
         val c8 = findViewById<Button>(R.id.ejer8)
         val c9 = findViewById<Button>(R.id.ejer9)
         val c0 = findViewById<Button>(R.id.ejer0)
-        var lista: MutableList<String> = mutableListOf()
+        val lista: MutableList<String> = mutableListOf()
         logout.setOnClickListener{
             Toast.makeText(this,"$saveuser ha Cerrado la Sesión",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
