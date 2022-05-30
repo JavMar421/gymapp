@@ -30,11 +30,7 @@
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    tools:layout_editor_absoluteX="247dp">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -46,7 +42,8 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
-                            app:srcCompat="@drawable/logogym2" />
+                            app:srcCompat="@drawable/logogym2"
+                            android:contentDescription="@string/app_name" />
                         <Space
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -56,10 +53,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="Ejercicio"
+                            android:text="@string/ejerdefname"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="30dp" />
+                            android:textSize="30sp" />
                         <Space
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -70,6 +67,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_gravity="center"
+                            android:contentDescription="@string/app_name"
                             app:srcCompat="@drawable/logout" />
                     </LinearLayout>
 
@@ -87,6 +85,13 @@
                         android:layout_gravity="center"
                         />
                     </LinearLayout>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -104,12 +109,12 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Series:"
+                                android:text="@string/series"
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
 
                             <Space
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1" />
 
@@ -117,10 +122,10 @@
                                 android:id="@+id/seriesejer"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=" "
+                                android:text=""
                                 android:textColor="@color/black"
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -134,12 +139,12 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Repeticiones:"
+                                android:text="@string/repeticiones"
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
 
                             <Space
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1" />
 
@@ -148,9 +153,9 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text=" "
+                                android:text=""
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -164,12 +169,12 @@
                                 android:textColor="@color/black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Peso:"
+                                android:text="@string/peso"
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
 
                             <Space
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2" />
 
@@ -179,9 +184,9 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:textColor="@color/black"
-                                android:text=" "
+                                android:text=""
                                 android:textAlignment="center"
-                                android:textSize="25dp" />
+                                android:textSize="25sp" />
                         </LinearLayout>
 
 
@@ -199,11 +204,11 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="1dp"
                             android:backgroundTint="#ED3B3B"
-                            android:text="Anterior"
-                            android:textSize="20dp" />
+                            android:text="@string/anterior"
+                            android:textSize="20sp" />
 
                         <Space
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1" />
 
@@ -213,15 +218,17 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="1dp"
                             android:backgroundTint="#ED3B3B"
-                            android:text="Siguiente"
-                            android:textSize="20dp" />
+                            android:text="@string/siguiente"
+                            android:textSize="20sp" />
 
 
                     </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
 
 
 
-                </LinearLayout>
+
 
             </LinearLayout>
 

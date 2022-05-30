@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="10dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:contentDescription="@string/app_name"
@@ -34,7 +35,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/logogym"/>
+                app:srcCompat="@drawable/logogym2"/>
 
             <TextView
                 android:id="@+id/textLogin1"

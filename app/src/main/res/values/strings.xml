@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Gymapp</string>
+    <string name="imagedescirtion">Imagen</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="recordar">Recordar</string>
@@ -25,4 +26,18 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="registro">Register</string>
     <string name="repearpassword">Repeat Password</string>
+    <string name="ejerdefname">Ejercicio</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="crear_tabla">Creación de Tablas</string>
+    <string name="usuario">Usuario</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="anterior">Anterior</string>
+    <string name="series">Series</string>
+    <string name="repeticiones">Repeticiones</string>
+    <string name="peso">Peso</string>
+    <string name="id">ID</string>
+    <string name="crear_ejer">Creación de Ejercicios</string>
+    <string name="calendario">Calendario</string>
+
 </resources>

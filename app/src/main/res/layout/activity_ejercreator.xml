@@ -20,6 +20,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
+            android:contentDescription="@string/imagedescirtion"
             android:id="@+id/logo"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -34,16 +35,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Creación de Ejercicios"
+            android:text="@string/crear_ejer"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <ImageView
+            android:contentDescription="@string/imagedescirtion"
             android:id="@+id/logoutlogo"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -59,6 +61,7 @@
             android:padding="10dp">
 
             <ImageView
+                android:contentDescription="@string/imagedescirtion"
                 android:id="@+id/tablaicon"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -73,6 +76,7 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:contentDescription="@string/imagedescirtion"
                 android:id="@+id/ejericon"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -87,6 +91,7 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:contentDescription="@string/imagedescirtion"
                 android:id="@+id/calendaricon"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -101,24 +106,28 @@
         android:layout_margin="5dp"
         tools:ignore="MissingConstraints">
         <EditText
+            android:inputType="text"
+            android:autofillHints="name"
             android:layout_margin="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:id="@+id/newejer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:ems="8"
-            android:hint="Nombre Ejercicio"
+            android:hint="@string/ejerdefname"
             android:text=""/>
         <EditText
+        android:inputType="number"
+        android:autofillHints="name"
         android:layout_margin="5dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:id="@+id/newejerid"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:ems="2"
-        android:hint="ID"
+        android:hint="@string/id"
         android:text=""/>
         </LinearLayout>
         <LinearLayout
@@ -138,22 +147,24 @@
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Series:"
+                android:text="@string/series"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
             <EditText
+                android:autofillHints="name"
+                android:inputType="number"
                 android:id="@+id/newejerserie"
                 android:layout_margin="1dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="2"
-                android:hint="Series"
+                android:hint="@string/series"
                 android:text=""/>
         </LinearLayout>
 
@@ -168,23 +179,25 @@
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Repeticiones:"
+                android:text="@string/repeticiones"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
             <EditText
+                android:autofillHints="name"
+                android:inputType="number"
                 android:id="@+id/newejerrepes"
                 android:layout_margin="1dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="5"
-                android:hint="Repeticiones"
+                android:hint="@string/repeticiones"
                 android:text=""/>
         </LinearLayout>
 
@@ -199,23 +212,25 @@
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Peso:"
+                android:text="@string/peso"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
             <EditText
+                android:autofillHints="name"
+                android:inputType="text"
                 android:id="@+id/newejerpeso"
                 android:layout_margin="1dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="2"
-                android:hint="Peso"
+                android:hint="@string/peso"
                 android:text=""/>
         </LinearLayout>
 
@@ -235,11 +250,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:backgroundTint="#ED3B3B"
-            android:text="Cancelar"
-            android:textSize="20dp" />
+            android:text="@string/cancelar"
+            android:textSize="20sp" />
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
@@ -249,8 +264,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:backgroundTint="#ED3B3B"
-            android:text="Aplicar"
-            android:textSize="20dp" />
+            android:text="@string/aplicar"
+            android:textSize="20sp" />
 
 
     </LinearLayout>

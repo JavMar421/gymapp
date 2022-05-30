@@ -13,12 +13,7 @@
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="1dp"
-                >
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -27,6 +22,7 @@
                     android:layout_margin="5dp">
 
                     <ImageView
+                        android:contentDescription="@string/app_name"
                         android:id="@+id/logo"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -41,16 +37,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Creación de Tablas"
+                        android:text="@string/crear_tabla"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="25dp" />
+                        android:textSize="25sp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1" />
 
                     <ImageView
+                        android:contentDescription="@string/app_name"
                         android:id="@+id/logoutlogo"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -68,6 +65,7 @@
                     android:padding="10dp">
 
                     <ImageView
+                        android:contentDescription="@string/app_name"
                         android:id="@+id/tablaicon"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -82,6 +80,7 @@
                         android:layout_weight="1" />
 
                     <ImageView
+                        android:contentDescription="@string/app_name"
                         android:id="@+id/ejericon"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -95,6 +94,7 @@
                         android:layout_weight="1" />
 
                     <ImageView
+                        android:contentDescription="@string/app_name"
                         android:id="@+id/calendaricon"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -118,12 +118,13 @@
                         android:orientation="horizontal">
 
                         <EditText
+                            android:autofillHints="name"
                             android:id="@+id/textusuario"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:ems="12"
-                            android:hint="Buscar Usuario"
+                            android:hint="@string/usuario"
                             android:inputType="text"
                             android:text="" />
 
@@ -147,11 +148,11 @@
                             android:id="@+id/checkBox1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:checked="false"
                             android:clickable="false"
                             android:layout_weight="0"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -173,11 +174,11 @@
                             android:id="@+id/checkBox2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -200,11 +201,11 @@
                             android:id="@+id/checkBox3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -226,11 +227,11 @@
                             android:id="@+id/checkBox4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -253,11 +254,11 @@
                             android:id="@+id/checkBox5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -279,11 +280,11 @@
                             android:id="@+id/checkBox6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -306,11 +307,11 @@
                             android:id="@+id/checkBox7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -332,11 +333,11 @@
                             android:id="@+id/checkBox8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -359,11 +360,11 @@
                             android:id="@+id/checkBox9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -385,11 +386,11 @@
                             android:id="@+id/checkBox0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginStart="3dp"
                             android:layout_weight="0"
                             android:checked="false"
                             android:clickable="false"
-                            android:text=" "/>
+                            android:text=""/>
 
 
                     </LinearLayout>
@@ -409,11 +410,11 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:backgroundTint="#ED3B3B"
-                        android:text="Cancelar"
-                        android:textSize="20dp" />
+                        android:text="@string/cancelar"
+                        android:textSize="20sp" />
 
                     <Space
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1" />
 
@@ -423,15 +424,15 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:backgroundTint="#ED3B3B"
-                        android:text="Aplicar"
-                        android:textSize="20dp" />
+                        android:text="@string/aplicar"
+                        android:textSize="20sp" />
 
 
                 </LinearLayout>
                 </LinearLayout>
 
                 </ScrollView>
-            </LinearLayout>
+
 
         </LinearLayout>
 

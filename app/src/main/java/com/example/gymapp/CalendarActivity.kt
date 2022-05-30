@@ -7,10 +7,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gymapp.databinding.ActivityCalendarBinding
 
 class CalendarActivity : AppCompatActivity() {
-        lateinit var binding: ActivityCalendarBinding
         @RequiresApi(Build.VERSION_CODES.M)
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
