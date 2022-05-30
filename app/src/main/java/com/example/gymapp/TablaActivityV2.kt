@@ -15,7 +15,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-var usuariotabla=""
+
 
 class TableActivityV2 :AppCompatActivity() {
 
@@ -43,7 +43,7 @@ class TableActivityV2 :AppCompatActivity() {
         val listadatos: MutableList<String> = mutableListOf()
         val listademo: MutableList<String> = mutableListOf("0","1","2","3","4","5","6","7","8","9")
 
-        if (saveuser.contains("admin")){
+        if (adminmode){
             linearMenu.visibility = View.VISIBLE
         }
         else{linearMenu.visibility = View.GONE}
@@ -59,16 +59,14 @@ class TableActivityV2 :AppCompatActivity() {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
-        if (usuariotabla.isNotEmpty()){saveuser=usuariotabla}
         Toast.makeText(this,"Cargando Tabla de $saveuser",Toast.LENGTH_SHORT).show()
         //Pantalla de Carga
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
-            delay(1500)
+            delay(1000)
             if (!datos){
-                delay(3000)
                 nodata()
-                delay(2000)
+                delay(1000)
                 logoGrande.visibility = View.GONE
                 siguiente.callOnClick()
             }else {

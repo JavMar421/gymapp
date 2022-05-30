@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
 //public var savemail = ""
 //public var savepass = ""
 var saveuser = ""
+var adminmode=false
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("SetTextI18n")
@@ -69,7 +70,10 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             var intent = Intent(this, TableActivityV2::class.java)
-                            if (email.text.contains("admin")){intent= Intent(this, EjerCreator::class.java)}
+
+                            if (email.text.contains("admin")){
+                                adminmode=true
+                                intent= Intent(this, EjerCreator::class.java)}
                             startActivity(intent)
                         } else {
                             error.text=error.text.toString()+" Usuario o Contraseña Incorrectos "

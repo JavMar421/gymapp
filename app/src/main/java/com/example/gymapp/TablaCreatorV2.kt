@@ -94,7 +94,7 @@ class TableCreatorV2 : AppCompatActivity() {
         }
 
         visualizar.setOnClickListener {
-            usuariotabla=usuario.text.toString()
+            saveuser=usuario.text.toString()
             val intent = Intent(this, TableActivityV2::class.java)
             startActivity(intent)
         }

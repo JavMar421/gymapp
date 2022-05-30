@@ -20,8 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".TableActivity" />
-        <activity android:name=".TableCreator" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".RecyclerActivity" />
         <activity android:name=".EjerCreator" />

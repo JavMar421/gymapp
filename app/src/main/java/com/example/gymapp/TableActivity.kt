@@ -1,6 +1,6 @@
 package com.example.gymapp
 
-
+/*
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -142,4 +142,4 @@ class TableActivity :AppCompatActivity() {
         Toast.makeText(this,"$saveuser no tiene Datos, cargando tabla completa",Toast.LENGTH_SHORT).show()
         Toast.makeText(this,"Contacta con un Administrador para una tabla personalizada",Toast.LENGTH_SHORT).show()
     }
-}
+}*/
