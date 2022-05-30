@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                                 Toast.makeText(this,"$saveuser guardado",Toast.LENGTH_SHORT).show()
                             }
 
-                            var intent = Intent(this, TableActivity::class.java)
+                            var intent = Intent(this, TableActivityV2::class.java)
                             if (email.text.contains("admin")){intent= Intent(this, EjerCreator::class.java)}
                             startActivity(intent)
                         } else {

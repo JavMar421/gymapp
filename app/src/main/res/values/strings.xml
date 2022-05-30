@@ -39,5 +39,8 @@
     <string name="id">ID</string>
     <string name="crear_ejer">Creación de Ejercicios</string>
     <string name="calendario">Calendario</string>
+    <string name="añadir">Añadir</string>
+    <string name="borrar_tabla">Borrar Tabla</string>
+    <string name="visualizar">Visualizar</string>
 
 </resources>

@@ -50,7 +50,7 @@ class TableCreator :AppCompatActivity() {
             startActivity(intent)
         }
         edittable.setOnClickListener{
-            val intent = Intent(this, TableCreator::class.java)
+            val intent = Intent(this, TableCreatorV2::class.java)
             startActivity(intent)
         }
         editejer.setOnClickListener{
