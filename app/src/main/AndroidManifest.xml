@@ -24,6 +24,8 @@
         <activity android:name=".TableCreator" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".RecyclerActivity" />
+        <activity android:name=".EjerCreator" />
+
 
     </application>
 

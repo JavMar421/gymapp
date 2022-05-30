@@ -18,11 +18,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-public var savemail = ""
-public var savepass = ""
-public var saveuser = ""
+//public var savemail = ""
+//public var savepass = ""
+var saveuser = ""
 class MainActivity : AppCompatActivity() {
-    //lateinit var binding: ActivityMainBinding
     @RequiresApi(Build.VERSION_CODES.M)
     var auth: FirebaseAuth = Firebase.auth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             logoGrande.visibility = View.GONE
 
         }
-        enviar.setOnClickListener() {
+        enviar.setOnClickListener{
             error.text="Error: "
             error.visibility= View.INVISIBLE
             if (email.text.toString().isEmpty() || pass.text.toString().isEmpty()){
@@ -62,14 +61,14 @@ class MainActivity : AppCompatActivity() {
                             Log.d(TAG, "signInWithEmail:success")
 
                             if (recordar.isChecked){
-                                savemail=email.text.toString()
-                                savepass=pass.text.toString()
+                                //savemail=email.text.toString()
+                                //savepass=pass.text.toString()
 
                                 Toast.makeText(this,"$saveuser guardado",Toast.LENGTH_SHORT).show()
                             }
 
                             var intent = Intent(this, TableActivity::class.java)
-                            if (email.text.contains("admin")){intent= Intent(this, TableCreator::class.java)}
+                            if (email.text.contains("admin")){intent= Intent(this, EjerCreator::class.java)}
                             startActivity(intent)
                         } else {
                             error.text=error.text.toString()+" Usuario o Contraseña Incorrectos "
@@ -84,23 +83,11 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        logo.setOnClickListener{val intent = Intent(this, CalendarActivity::class.java)
-            startActivity(intent)
-        }
-        registro.setOnClickListener() {
+        registro.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-
-    }
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            //reload();
-        }
 
     }
     fun updateUI(user: FirebaseUser?) {

@@ -6,39 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:tabMode="scrollable"
-            >
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/calendario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calendario"
-                />
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabla"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tabla"/>
-
-
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/chat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chat" />
-        </com.google.android.material.tabs.TabLayout>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -67,31 +35,85 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
 
                         <ImageView
                             android:id="@+id/logo"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_gravity="center"
-                            app:srcCompat="@drawable/logogym" />
-
+                            app:srcCompat="@drawable/logogym2" />
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
                         <TextView
-                            android:id="@+id/titleCalendario"
-                            android:layout_width="match_parent"
+                            android:id="@+id/calendario"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="5dp"
                             android:text="Calendario"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="35dp" />
+                            android:textSize="25dp" />
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/logoutlogo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/logout" />
                     </LinearLayout>
 
-                    <Space
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp" />
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#E6E2E2"
+                        android:orientation="horizontal"
 
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/tablaicon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/edittableicon" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/ejericon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/editejericon" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/calendaricon"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="#EC6767"
+                            android:padding="10dp"
+                            app:srcCompat="@drawable/calendaricon" />
+                    </LinearLayout>
                     <CalendarView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />

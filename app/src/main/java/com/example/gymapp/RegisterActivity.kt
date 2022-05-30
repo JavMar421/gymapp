@@ -1,26 +1,18 @@
 package com.example.gymapp
 
-import android.accounts.AbstractAccountAuthenticator
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.transition.Fade
-import android.transition.Visibility
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.delay
-import okhttp3.internal.wait
-import java.net.PasswordAuthentication
-import kotlin.concurrent.timer
 
 class RegisterActivity : AppCompatActivity() {
     var auth: FirebaseAuth = Firebase.auth
@@ -35,9 +27,10 @@ class RegisterActivity : AppCompatActivity() {
         val error = findViewById<TextView>(R.id.textoErrorLogin2)
         val registro = findViewById<Button>(R.id.botonRegister)
         val inicio = findViewById<Button>(R.id.botonLogin)
-        registro.setOnClickListener() {
+        registro.setOnClickListener {
             error.visibility=View.INVISIBLE
             error.text="Error: "
+
             var verify=0
 
             if (email.text.contains("@") && email.text.contains(".")){verify++}
@@ -56,7 +49,11 @@ class RegisterActivity : AppCompatActivity() {
             else {
                 error.text=error.text.toString()+"Contraseñas no Iguales "
                 error.visibility = View.VISIBLE}
-            if (verify==3){
+            if (!email.text.contains("admin")){verify++}
+            else {
+                error.text=error.text.toString()+"Dirección Reservada a Administradores "
+                error.visibility = View.VISIBLE}
+            if (verify==4){
             auth.createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
@@ -79,30 +76,17 @@ class RegisterActivity : AppCompatActivity() {
                         updateUI(null)
                     }
                 }
-            /*val intent = Intent(this, TableActivity::class.java)
-            startActivity(intent)*/
             }
         }
 
-        inicio.setOnClickListener() {
+        inicio.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
-
-
-
     fun updateUI(user: FirebaseUser?) {
     }
 
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-        if(currentUser != null){
-            //reload();
-        }
-    }
 
 }
 

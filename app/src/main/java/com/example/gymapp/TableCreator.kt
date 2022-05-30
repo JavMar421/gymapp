@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -15,10 +14,13 @@ class TableCreator :AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tablecreator)
         val database = Firebase.database("https://gym-proyect-dam-default-rtdb.europe-west1.firebasedatabase.app")
-        var Cancelar = findViewById<Button>(R.id.Cancelar)
-        var Aplicar = findViewById<Button>(R.id.Aplicar)
-        val Usuario = findViewById<EditText>(R.id.textusuario)
+        val cancelar = findViewById<Button>(R.id.Cancelar)
+        val aplicar = findViewById<Button>(R.id.Aplicar)
+        val usuario = findViewById<EditText>(R.id.textusuario)
         val logout = findViewById<ImageView>(R.id.logoutlogo)
+        val edittable = findViewById<ImageView>(R.id.tablaicon)
+        val editejer = findViewById<ImageView>(R.id.ejericon)
+        val calendar = findViewById<ImageView>(R.id.calendaricon)
         var num=0
         val ch1 = findViewById<CheckBox>(R.id.checkBox1)
         val ch2 = findViewById<CheckBox>(R.id.checkBox2)
@@ -45,6 +47,18 @@ class TableCreator :AppCompatActivity() {
         logout.setOnClickListener{
             Toast.makeText(this,"$saveuser ha Cerrado la Sesión",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        edittable.setOnClickListener{
+            val intent = Intent(this, TableCreator::class.java)
+            startActivity(intent)
+        }
+        editejer.setOnClickListener{
+            val intent = Intent(this, EjerCreator::class.java)
+            startActivity(intent)
+        }
+        calendar.setOnClickListener{
+            val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
         c1.setOnClickListener {
@@ -95,14 +109,14 @@ class TableCreator :AppCompatActivity() {
         }
 
 
-        Cancelar.setOnClickListener {
+        cancelar.setOnClickListener {
             Toast.makeText(this,"Operación Cancelada",Toast.LENGTH_SHORT).show()
-            var intent = Intent(this, TableCreator::class.java)
+            val intent = Intent(this, TableCreator::class.java)
             startActivity(intent)
         }
 
-        Aplicar.setOnClickListener {
-            if (Usuario.text.toString().isEmpty()) {
+        aplicar.setOnClickListener {
+            if (usuario.text.toString().isEmpty()) {
                 Toast.makeText(this, "Seleccione un Usuario", Toast.LENGTH_SHORT).show()
             } else {
                 if (ch1.isChecked) {
@@ -135,22 +149,21 @@ class TableCreator :AppCompatActivity() {
                 if (ch0.isChecked) {
                     lista.add("0")
                 }
-
-                database.reference.child("usuarios").child(Usuario.text.toString())
+                database.reference.child("usuarios").child(usuario.text.toString())
 
                 for (i in 0..10) {
                     if (lista.contains("$num")) {
                         Toast.makeText(
                             this,
-                            "Se ha creado la Tabla de ${Usuario.text}",
+                            "Se ha creado la Tabla de ${usuario.text}",
                             Toast.LENGTH_SHORT
                         ).show()
-                        database.reference.child("usuarios").child(Usuario.text.toString())
+                        database.reference.child("usuarios").child(usuario.text.toString())
                             .child("$num").setValue("$num")
                     }
                     num++
                 }
-                var intent = Intent(this, TableCreator::class.java)
+                val intent = Intent(this, TableCreator::class.java)
                 startActivity(intent)
             }
 
