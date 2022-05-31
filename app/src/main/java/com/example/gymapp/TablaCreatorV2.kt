@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gymapp.UserApplication.Companion.datos
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -34,6 +35,7 @@ class TableCreatorV2 : AppCompatActivity() {
         val borrar = findViewById<Button>(R.id.borrarTabla)
         //Menu
         logout.setOnClickListener{
+            datos.wipe()
             Toast.makeText(this,"$saveuser ha Cerrado la Sesión", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

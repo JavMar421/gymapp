@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gymapp.UserApplication.Companion.datos
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
@@ -39,7 +40,7 @@ class TableActivityV2 :AppCompatActivity() {
         val calendar = findViewById<ImageView>(R.id.calendaricon)
         val logout = findViewById<ImageView>(R.id.logoutlogo)
         var num=0
-        var datos=false
+        var datoss=false
         val listadatos: MutableList<String> = mutableListOf()
         val listademo: MutableList<String> = mutableListOf("0","1","2","3","4","5","6","7","8","9")
 
@@ -64,7 +65,7 @@ class TableActivityV2 :AppCompatActivity() {
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
-            if (!datos){
+            if (!datoss){
                 nodata()
                 delay(1000)
                 logoGrande.visibility = View.GONE
@@ -77,6 +78,7 @@ class TableActivityV2 :AppCompatActivity() {
         }
 
         logout.setOnClickListener{
+            datos.wipe()
             Toast.makeText(this,"Cerrando Sesion",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -98,7 +100,7 @@ class TableActivityV2 :AppCompatActivity() {
                     Toast.makeText(this,"no se encontraron datos de Usuario",Toast.LENGTH_SHORT).show()
                 }
                 else{
-                datos=true
+                datoss=true
                     for (i in 0..9){
                         database.reference.child("usuarios").child(saveuser).child("$i").get().addOnSuccessListener {
                             if (it.value != null) {
@@ -111,7 +113,7 @@ class TableActivityV2 :AppCompatActivity() {
                 }
 
         siguiente.setOnClickListener{
-            if (!datos) {
+            if (!datoss) {
                 do {
                     num++
                     if (num > 9) {
@@ -166,7 +168,7 @@ class TableActivityV2 :AppCompatActivity() {
         }
 
         anterior.setOnClickListener{
-            if (!datos){
+            if (!datoss){
                 do {
                     num--
                     if (num < 0) {

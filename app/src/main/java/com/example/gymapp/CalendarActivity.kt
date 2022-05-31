@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
+import com.example.gymapp.UserApplication.Companion.datos
 
 class CalendarActivity : AppCompatActivity() {
         @RequiresApi(Build.VERSION_CODES.M)
@@ -25,9 +25,11 @@ class CalendarActivity : AppCompatActivity() {
             val anterior = findViewById<Button>(R.id.Anterior)
 
             logout.setOnClickListener{
+                datos.wipe()
                 Toast.makeText(this,"$saveuser ha Cerrado la Sesión", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+
             }
             edittable.setOnClickListener{
                 val intent = Intent(this, TableCreatorV2::class.java)
@@ -41,13 +43,24 @@ class CalendarActivity : AppCompatActivity() {
                 val intent = Intent(this, CalendarActivity::class.java)
                 startActivity(intent)
             }
-            var cosa=""
+            var cosa:String
+
             calendar.setOnDateChangeListener { _, i, i1, i2 ->
                 cosa=(i2.toString()+"/"+(i1+1)+"/"+i)
                 Toast.makeText(this,cosa,Toast.LENGTH_SHORT).show()
+
             }
 
+            calendar.date
 
+            siguiente.setOnClickListener {
+                calendar.setDate(calendar.date)
+                Toast.makeText(this,"",Toast.LENGTH_SHORT).show()
+
+            }
+            anterior.setOnClickListener {
+
+            }
 
         }
     }

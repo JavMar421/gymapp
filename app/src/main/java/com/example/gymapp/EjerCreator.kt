@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gymapp.UserApplication.Companion.datos
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 class EjerCreator :AppCompatActivity() {
@@ -29,6 +30,7 @@ class EjerCreator :AppCompatActivity() {
         var dato:String
 
         logout.setOnClickListener{
+            datos.wipe()
             Toast.makeText(this,"Cerrando Sesion",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

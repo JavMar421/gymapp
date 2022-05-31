@@ -63,9 +63,10 @@
                             android:layout_weight="1" />
 
                         <ImageView
+                            android:background="@drawable/bg_logout"
                             android:id="@+id/logoutlogo"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:layout_gravity="center"
                             android:contentDescription="@string/app_name"
                             app:srcCompat="@drawable/logout" />
