@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        adminmode=false
+        saveuser=""
         val logoGrande = findViewById<ImageView>(R.id.logoGrande)
         val email = findViewById<EditText>(R.id.textEmail)
         val pass = findViewById<EditText>(R.id.textPassword)

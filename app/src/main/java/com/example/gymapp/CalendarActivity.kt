@@ -40,8 +40,8 @@ class CalendarActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             calendaricon.setOnClickListener{
-                val intent = Intent(this, CalendarActivity::class.java)
-                startActivity(intent)
+                /*val intent = Intent(this, CalendarActivity::class.java)
+                startActivity(intent)*/
             }
             var cosa:String
 

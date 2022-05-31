@@ -41,8 +41,8 @@ class TableCreatorV2 : AppCompatActivity() {
             startActivity(intent)
         }
         edittable.setOnClickListener{
-            val intent = Intent(this, TableCreatorV2::class.java)
-            startActivity(intent)
+            /*val intent = Intent(this, TableCreatorV2::class.java)
+            startActivity(intent)*/
         }
         editejer.setOnClickListener{
             val intent = Intent(this, EjerCreator::class.java)

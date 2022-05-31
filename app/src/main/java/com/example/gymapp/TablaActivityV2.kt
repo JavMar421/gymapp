@@ -60,7 +60,6 @@ class TableActivityV2 :AppCompatActivity() {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
-        Toast.makeText(this,"Cargando Tabla de $saveuser",Toast.LENGTH_SHORT).show()
         //Pantalla de Carga
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {

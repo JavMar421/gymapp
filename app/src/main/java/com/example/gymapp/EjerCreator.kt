@@ -40,8 +40,8 @@ class EjerCreator :AppCompatActivity() {
             startActivity(intent)
         }
         editejer.setOnClickListener{
-            val intent = Intent(this, EjerCreator::class.java)
-            startActivity(intent)
+            /*val intent = Intent(this, EjerCreator::class.java)
+            startActivity(intent)*/
         }
         calendar.setOnClickListener{
             val intent = Intent(this, CalendarActivity::class.java)
