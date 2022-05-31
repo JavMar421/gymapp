@@ -23,6 +23,7 @@ class CalendarActivity : AppCompatActivity() {
             val calendar = findViewById<CalendarView>(R.id.calendar)
             val siguiente = findViewById<Button>(R.id.Siguiente)
             val anterior = findViewById<Button>(R.id.Anterior)
+
             logout.setOnClickListener{
                 Toast.makeText(this,"$saveuser ha Cerrado la Sesión", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
@@ -40,17 +41,10 @@ class CalendarActivity : AppCompatActivity() {
                 val intent = Intent(this, CalendarActivity::class.java)
                 startActivity(intent)
             }
-            
-            siguiente.setOnClickListener {
-                var cosa=""
-
+            var cosa=""
+            calendar.setOnDateChangeListener { _, i, i1, i2 ->
+                cosa=(i2.toString()+"/"+(i1+1)+"/"+i)
                 Toast.makeText(this,cosa,Toast.LENGTH_SHORT).show()
-
-            }
-            anterior.setOnClickListener {
-                var cosa=""
-                Toast.makeText(this,cosa,Toast.LENGTH_SHORT).show()
-
             }
 
 
