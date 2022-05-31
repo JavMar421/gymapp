@@ -20,10 +20,8 @@ class TableCreatorV2 : AppCompatActivity() {
         setContentView(R.layout.tablacreatorv2)
         val database = Firebase.database("https://gym-proyect-dam-default-rtdb.europe-west1.firebasedatabase.app")
         val logout = findViewById<ImageView>(R.id.logoutlogo)
-        val edittable = findViewById<ImageView>(R.id.tablaicon)
         val editejer = findViewById<ImageView>(R.id.ejericon)
         val calendar = findViewById<ImageView>(R.id.calendaricon)
-
         val usuario = findViewById<EditText>(R.id.textusuario)
         val ejercicio = findViewById<EditText>(R.id.editej)
         val series = findViewById<EditText>(R.id.ejerserie)
@@ -33,16 +31,13 @@ class TableCreatorV2 : AppCompatActivity() {
         val add = findViewById<Button>(R.id.add)
         val visualizar = findViewById<Button>(R.id.visualizar)
         val borrar = findViewById<Button>(R.id.borrarTabla)
+
         //Menu
         logout.setOnClickListener{
             datos.wipe()
             Toast.makeText(this,"$saveuser ha Cerrado la Sesión", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        }
-        edittable.setOnClickListener{
-            /*val intent = Intent(this, TableCreatorV2::class.java)
-            startActivity(intent)*/
         }
         editejer.setOnClickListener{
             val intent = Intent(this, EjerCreator::class.java)

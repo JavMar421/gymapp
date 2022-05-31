@@ -25,7 +25,6 @@ class EjerCreator :AppCompatActivity() {
         val aplicar = findViewById<Button>(R.id.Aplicar)
         val logout = findViewById<ImageView>(R.id.logoutlogo)
         val edittable = findViewById<ImageView>(R.id.tablaicon)
-        val editejer = findViewById<ImageView>(R.id.ejericon)
         val calendar = findViewById<ImageView>(R.id.calendaricon)
         var dato:String
 
@@ -38,10 +37,6 @@ class EjerCreator :AppCompatActivity() {
         edittable.setOnClickListener{
             val intent = Intent(this, TableCreatorV2::class.java)
             startActivity(intent)
-        }
-        editejer.setOnClickListener{
-            /*val intent = Intent(this, EjerCreator::class.java)
-            startActivity(intent)*/
         }
         calendar.setOnClickListener{
             val intent = Intent(this, CalendarActivity::class.java)

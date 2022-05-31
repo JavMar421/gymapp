@@ -117,59 +117,51 @@
                     android:background="@drawable/bg_menu"
                     android:id="@+id/calendar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:dateTextAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:layout_margin="10dp"
-                    android:padding="10dp"/>
-
-
+                    android:layout_margin="5dp"
+                    android:padding="5dp"/>
                 <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:gravity="bottom"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/Anterior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/horario"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/horario"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/horarioim"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:backgroundTint="#ED3B3B"
-                    android:text="@string/anterior"
-                    android:textSize="20sp" />
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/Siguiente"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:backgroundTint="#ED3B3B"
-                    android:text="@string/siguiente"
-                    android:textSize="20sp" />
-            </LinearLayout>
-                <TextView
-                    android:layout_margin="3dp"
-                    android:textSize="15sp"
-                    android:id="@+id/horarioins"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/horarioinstructor2"
-                    android:textColor="#787575" />
-                <TextView
-                    android:layout_margin="3dp"
-                    android:textSize="15sp"
-                    android:id="@+id/horarioins2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/horarioinstructor"
-                    android:textColor="#787575" />
-
+                    android:src="@drawable/horario"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/imagedescirtion" />
+                    <TextView
+                        android:layout_margin="3dp"
+                        android:textSize="13sp"
+                        android:id="@+id/horarioins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/horarioinstructor2"
+                        android:textColor="#787575" />
+                    <TextView
+                        android:layout_margin="3dp"
+                        android:textSize="13sp"
+                        android:id="@+id/horarioins2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/horarioinstructor"
+                        android:textColor="#787575" />
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                </LinearLayout>
 
 
 

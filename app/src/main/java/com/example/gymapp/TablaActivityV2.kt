@@ -47,10 +47,19 @@ class TableActivityV2 :AppCompatActivity() {
         if (adminmode){
             linearMenu.visibility = View.VISIBLE
         }
-        else{linearMenu.visibility = View.GONE}
+        else{
+            editejer.visibility = View.INVISIBLE
+
+            //linearMenu.visibility = View.GONE
+        }
         edittable.setOnClickListener{
-            val intent = Intent(this, TableCreatorV2::class.java)
-            startActivity(intent)
+            val intent:Intent
+            if (adminmode){
+                intent = Intent(this, TableCreatorV2::class.java)
+                startActivity(intent)
+            }
+
+
         }
         editejer.setOnClickListener{
             val intent = Intent(this, EjerCreator::class.java)

@@ -89,14 +89,6 @@
                 android:text="@string/error_default"
                 android:textColor="#ED3B3B"
                 android:visibility="invisible" />
-            <Switch
-                android:id="@+id/switchRecordarUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/recordar"
-                tools:ignore="UseSwitchCompatOrMaterialXml" />
-
         </LinearLayout>
 
         <LinearLayout
