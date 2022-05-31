@@ -70,10 +70,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:background="#E6E2E2"
+                        android:background="@drawable/bg_menu"
                         android:orientation="horizontal"
-
-                        android:padding="10dp">
+                        android:padding="5dp">
 
                         <ImageView
                             android:contentDescription="@string/crear_tabla"
@@ -109,13 +108,66 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
-                            android:background="#EC6767"
+                            android:background="@drawable/bg_icon"
                             android:padding="10dp"
                             app:srcCompat="@drawable/calendaricon" />
                     </LinearLayout>
-                    <CalendarView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+
+                <CalendarView
+                    android:id="@+id/calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dateTextAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:maxDate="12/31/2023"
+                    android:minDate="01/01/2021" />
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Anterior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:backgroundTint="#ED3B3B"
+                    android:text="@string/anterior"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/Siguiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:backgroundTint="#ED3B3B"
+                    android:text="@string/siguiente"
+                    android:textSize="20sp" />
+            </LinearLayout>
+                <TextView
+                    android:layout_margin="3dp"
+                    android:textSize="15sp"
+                    android:id="@+id/horarioins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/horarioinstructor2"
+                    android:textColor="#787575" />
+                <TextView
+                    android:layout_margin="3dp"
+                    android:textSize="15sp"
+                    android:id="@+id/horarioins2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/horarioinstructor"
+                    android:textColor="#787575" />
 
 
 
