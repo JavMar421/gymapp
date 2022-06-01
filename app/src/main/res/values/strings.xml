@@ -43,7 +43,29 @@
     <string name="borrar_tabla">Borrar Tabla</string>
     <string name="visualizar">Visualizar</string>
     <string name="horarioinstructor">Lunes a Viernes de 9:00 a 14:00 y de 17:00 a 20:00</string>
-    <string name="horarioinstructor2">Disponibilidad de Instructores</string>
+    <string name="horarioinstructor2">Disponibilidad de Instructores:</string>
     <string name="horario">Horario</string>
+    <string name="hora">Hora</string>
+    <string name="h9">9:00</string>
+    <string name="h10">10:00</string>
+    <string name="h11">11:00</string>
+    <string name="h12">12:00</string>
+    <string name="h13">13:00</string>
+    <string name="h17">17:00</string>
+    <string name="h18">18:00</string>
+    <string name="h19">19:00</string>
+    <string name="h20">20:00</string>
+    <string name="lunes">Lunes</string>
+    <string name="martes">Martes</string>
+    <string name="miercoles">Miercoles</string>
+    <string name="jueves">Jueves</string>
+    <string name="viernes">Viernes</string>
+    <string name="reservar">Reservar</string>
+    <string name="personas">Personas</string>
+    <string name="evento">Evento</string>
+    <string name="resumen_evento">Resumen Evento</string>
+    <string name="empty_string" />
+    <string name="dia">Día</string>
+    <string name="borrar">Borrar</string>
 
 </resources>

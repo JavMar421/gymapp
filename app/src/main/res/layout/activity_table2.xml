@@ -253,7 +253,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="1dp"
-                                android:backgroundTint="#ED3B3B"
+                                android:backgroundTint="#EC6767"
                                 android:text="@string/anterior"
                                 android:textSize="20sp" />
 
@@ -267,7 +267,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="1dp"
-                                android:backgroundTint="#ED3B3B"
+                                android:backgroundTint="#EC6767"
                                 android:text="@string/siguiente"
                                 android:textSize="20sp" />
 

@@ -113,14 +113,6 @@
                             android:padding="10dp"
                             app:srcCompat="@drawable/calendaricon" />
                     </LinearLayout>
-                <CalendarView
-                    android:background="@drawable/bg_menu"
-                    android:id="@+id/calendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:dateTextAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:layout_margin="5dp"
-                    android:padding="5dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,14 +126,6 @@
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
-                <ImageView
-                    android:layout_gravity="center"
-                    android:id="@+id/horarioim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/horario"
-                    android:layout_margin="5dp"
-                    android:contentDescription="@string/imagedescirtion" />
                     <TextView
                         android:layout_margin="3dp"
                         android:textSize="13sp"
@@ -158,9 +142,945 @@
                         android:layout_height="wrap_content"
                         android:text="@string/horarioinstructor"
                         android:textColor="#787575" />
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:padding="3dp"
+                                android:text="@string/hora"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h9"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h10"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h11"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h12"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h13"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h17"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h18"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h19"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:padding="3dp"
+                                android:text="@string/h20"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:id="@+id/Lunes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text="@string/lunes"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/L9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/L20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:id="@+id/Martes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text="@string/martes"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/M9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/M20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:id="@+id/Miercoles"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text="@string/miercoles"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/X9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/X20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:id="@+id/Jueves"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text="@string/jueves"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/J9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/J20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <TextView
+                                android:id="@+id/Viernes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text="@string/viernes"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                tools:ignore="TooManyViews" />
+
+                            <TextView
+                                android:id="@+id/V9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                tools:ignore="TooManyViews" />
+
+                            <TextView
+                                android:id="@+id/V11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V17"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V18"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V19"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/V20"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="3dp"
+                                android:background="@drawable/bg_horario"
+                                android:backgroundTint="#373131"
+                                android:padding="3dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/botonesevento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="15dp"/>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <EditText
+                                android:inputType="text"
+                                android:maxLength="9"
+                                android:layout_margin="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autofillHints="text"
+                                android:hint="@string/dia"
+                                android:id="@+id/Dia"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:padding="5sp"
+                                android:textColorHint="@color/white"
+                                android:background="@drawable/bg_icon"
+                                />
+
+                            <EditText
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:layout_margin="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:autofillHints="text"
+                                android:hint="@string/hora"
+                                android:id="@+id/horaNewEv"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:padding="5sp"
+                                android:textColorHint="@color/white"
+                                android:background="@drawable/bg_icon"
+                                />
+                        </LinearLayout>
+                        <EditText
+                            android:inputType="text"
+                            android:maxLength="20"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:autofillHints="text"
+                            android:hint="@string/evento"
+                            android:id="@+id/evento"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:padding="5sp"
+                            android:textColorHint="@color/white"
+                            android:background="@drawable/bg_icon"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:autofillHints="text"
+                            android:inputType="text"
+                            android:layout_margin="5dp"
+                            android:textSize="13sp"
+                            android:layout_width="match_parent"
+                            android:hint="@string/resumen_evento"
+                            android:id="@+id/resumenevento"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:padding="3dp"
+                            android:textColorHint="@color/white"
+                            android:background="@drawable/bg_icon"
+                            android:layout_height="wrap_content"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:textSize="13sp"
+                                android:layout_width="wrap_content"
+                                android:text="@string/personas"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:padding="3dp"
+                                android:background="@drawable/bg_icon"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:autofillHints="numbers"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:id="@+id/personas"
+                                android:layout_margin="5dp"
+                                android:textSize="13sp"
+                                android:layout_width="25dp"
+                                android:hint="@string/empty_string"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:padding="3dp"
+                                android:text="@string/empty_string"
+                                android:textColorHint="@color/white"
+                                android:background="@drawable/bg_icon"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:textSize="13sp"
+                                android:layout_width="match_parent"
+                                android:text="@string/reservar"
+                                android:id="@+id/eventobotton"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:background="@drawable/bg_edit_text"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:textSize="13sp"
+                            android:layout_width="match_parent"
+                            android:text="@string/borrar"
+                            android:id="@+id/borrarevento"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_edit_text"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+
+
                 </LinearLayout>
 
 

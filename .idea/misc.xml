@@ -12,7 +12,10 @@
         <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_settings.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/AlumnoM/Desktop/Multimedia Recu/gymapp/app/src/main/res/layout/activity_table.xml" value="0.27717391304347827" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2725" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bd_horario.xml" value="0.3675" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_boton.xml" value="0.3675" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_edit_text.xml" value="0.2725" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_horario.xml" value="0.3675" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_icon.xml" value="0.2725" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_logout.xml" value="0.2725" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/drawable/bg_menu.xml" value="0.2725" />
@@ -35,7 +38,7 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/activity_tablecreator.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/content_main.xml" value="0.31040564373897706" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/recycler_view.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/tablacreatorv2.xml" value="0.67" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/layout/tablacreatorv2.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_logotipo.xml" value="0.196" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/gymapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.196" />

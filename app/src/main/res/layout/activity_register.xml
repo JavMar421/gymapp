@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
-                android:backgroundTint="#ED3B3B"
+                android:backgroundTint="#EC6767"
                 android:text="@string/crear_cuenta"
                 android:textSize="12sp" />
             <Space
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="1dp"
-                android:backgroundTint="#ED3B3B"
+                android:backgroundTint="#EC6767"
                 android:text="@string/iniciar_boton"
                 android:textSize="12sp" />
         </LinearLayout>

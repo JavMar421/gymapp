@@ -5,7 +5,6 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.transition.Visibility
 import android.util.Log
 import android.view.View
 import android.widget.*
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
-            if (email.text.toString().equals(datos.getName())&&pass.text.toString().equals(datos.getPass())){
+            if (email.text.toString() == datos.getName() && pass.text.toString() == datos.getPass()){
                 enviar.callOnClick()
                 error.visibility=View.INVISIBLE
             }
