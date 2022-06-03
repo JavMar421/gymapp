@@ -160,7 +160,7 @@ class CalendarActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this,
-                                evento.text.toString() + " está lleno " + personas,
+                                evento.text.toString() + " está lleno",
                                 Toast.LENGTH_SHORT
                             ).show()
 
