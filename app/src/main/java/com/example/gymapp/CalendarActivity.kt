@@ -131,7 +131,6 @@ class CalendarActivity : AppCompatActivity() {
             if (horas.contains(hora.text.toString()) && dias.contains(dia.text.toString().lowercase()) && evento.text.toString().isNotEmpty() && personas.text.toString().isNotEmpty() && resumenevento.text.toString().isNotEmpty()){
 
                 numpersonas=Integer.parseInt(personas.text.toString())
-                Toast.makeText(this, "dia y hora correcta", Toast.LENGTH_SHORT).show()
 
                     Toast.makeText(this, evento.text.toString() + " Editado", Toast.LENGTH_SHORT).show()
                     database.reference.child("horario").child(dia.text.toString().lowercase()).child(hora.text.toString()).child("nombre").setValue(evento.text.toString())
