@@ -50,35 +50,47 @@ class TableCreatorV2 : AppCompatActivity() {
 
         var num=0
         add.setOnClickListener {
-            if (ejercicio.text.isNotEmpty() && peso.text.isNotEmpty() && repes.text.isNotEmpty() && series.text.isNotEmpty()) {
-                database.reference.child("usuarios").child(usuario.text.toString()).child("$num")
-                    .get().addOnSuccessListener {
-                        if (it.value == null) {
-                            database.reference.child("usuarios").child(usuario.text.toString())
-                                .child("$num").child("nombre").setValue(ejercicio.text.toString())
-                            database.reference.child("usuarios").child(usuario.text.toString())
-                                .child("$num").child("peso").setValue(peso.text.toString())
-                            database.reference.child("usuarios").child(usuario.text.toString())
-                                .child("$num").child("reps").setValue(repes.text.toString())
-                            database.reference.child("usuarios").child(usuario.text.toString())
-                                .child("$num").child("serie").setValue(series.text.toString())
-                            database.reference.child("usuarios").child(usuario.text.toString())
-                                .child("$num").child("video")
-                                .setValue("https://firebasestorage.googleapis.com/v0/b/gym-proyect-dam.appspot.com/o/error.mp4?alt=media&token=7778d1cd-4a71-430f-a89f-141e504a7171")
 
-                            Toast.makeText(this, "Ejercicio Añadido", Toast.LENGTH_SHORT).show()
-                            ejercicio.text.clear()
-                            peso.text.clear()
-                            repes.text.clear()
-                            series.text.clear()
-                        } else {
-                            num++
-                            add.callOnClick()
-                        }
+            database.reference.child("usuarios").child(usuario.text.toString()).get().addOnSuccessListener {
+                if (it.value==null){
+                    Toast.makeText(this, "Usuario No Existe", Toast.LENGTH_SHORT).show()
+                    usuario.text.clear()
+
+                }else{
+                    if (ejercicio.text.isNotEmpty() && peso.text.isNotEmpty() && repes.text.isNotEmpty() && series.text.isNotEmpty()) {
+
+                        database.reference.child("usuarios").child(usuario.text.toString()).child("$num")
+                            .get().addOnSuccessListener {
+                                if (it.value == null) {
+                                    database.reference.child("usuarios").child(usuario.text.toString())
+                                        .child("$num").child("nombre").setValue(ejercicio.text.toString())
+                                    database.reference.child("usuarios").child(usuario.text.toString())
+                                        .child("$num").child("peso").setValue(peso.text.toString())
+                                    database.reference.child("usuarios").child(usuario.text.toString())
+                                        .child("$num").child("reps").setValue(repes.text.toString())
+                                    database.reference.child("usuarios").child(usuario.text.toString())
+                                        .child("$num").child("serie").setValue(series.text.toString())
+                                    database.reference.child("usuarios").child(usuario.text.toString())
+                                        .child("$num").child("video")
+                                        .setValue("https://firebasestorage.googleapis.com/v0/b/gym-proyect-dam.appspot.com/o/error.mp4?alt=media&token=7778d1cd-4a71-430f-a89f-141e504a7171")
+
+                                    Toast.makeText(this, "Ejercicio Añadido", Toast.LENGTH_SHORT).show()
+                                    ejercicio.text.clear()
+                                    peso.text.clear()
+                                    repes.text.clear()
+                                    series.text.clear()
+                                } else {
+                                    num++
+                                    add.callOnClick()
+                                }
+                            }
+
                     }
-
+                    else{Toast.makeText(this, "Rellena los Campos Correctamente", Toast.LENGTH_SHORT).show() }
+                }
             }
-            else{Toast.makeText(this, "Rellena los Campos Vacíos", Toast.LENGTH_SHORT).show() }
+
+
         }
         cancelar.setOnClickListener {
             val intent = Intent(this, TableCreatorV2::class.java)
@@ -91,9 +103,17 @@ class TableCreatorV2 : AppCompatActivity() {
         }
 
         visualizar.setOnClickListener {
-            saveuser=usuario.text.toString()
-            val intent = Intent(this, TableActivityV2::class.java)
-            startActivity(intent)
+            database.reference.child("usuarios").child(usuario.text.toString()).get().addOnSuccessListener {
+            if (it.value==null){
+                Toast.makeText(this, "Usuario No Existe", Toast.LENGTH_SHORT).show()
+                usuario.text.clear()
+
+            }else{
+                saveuser=usuario.text.toString()
+                val intent = Intent(this, TableActivityV2::class.java)
+                startActivity(intent)
+            }
+            }
         }
 
     }

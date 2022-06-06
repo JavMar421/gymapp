@@ -82,7 +82,7 @@ class CalendarActivity : AppCompatActivity() {
         var numpersonas:Int
         logout.setOnClickListener {
             datos.wipe()
-            Toast.makeText(this, "$saveuser ha Cerrado la Sesión", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Cerrando la Sesión", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 

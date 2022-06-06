@@ -34,7 +34,6 @@ class TableActivityV2 :AppCompatActivity() {
         val peso = findViewById<TextView>(R.id.pesoejer)
         val series = findViewById<TextView>(R.id.seriesejer)
         val repeticiones = findViewById<TextView>(R.id.repesejer)
-        val logoGrande = findViewById<ImageView>(R.id.logoGrande)
         val edittable = findViewById<ImageView>(R.id.tablaicon)
         val editejer = findViewById<ImageView>(R.id.ejericon)
         val calendar = findViewById<ImageView>(R.id.calendaricon)
@@ -49,8 +48,6 @@ class TableActivityV2 :AppCompatActivity() {
         }
         else{
             editejer.visibility = View.INVISIBLE
-
-            //linearMenu.visibility = View.GONE
         }
         edittable.setOnClickListener{
             val intent:Intent
@@ -70,16 +67,16 @@ class TableActivityV2 :AppCompatActivity() {
             startActivity(intent)
         }
         //Pantalla de Carga
-        logoGrande.visibility = View.VISIBLE
+        //logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
             if (!datoss){
                 nodata()
-                delay(1000)
-                logoGrande.visibility = View.GONE
+                //logoGrande.visibility = View.GONE
                 siguiente.callOnClick()
+                ejernombre.visibility = View.VISIBLE
             }else {
-                logoGrande.visibility = View.GONE
+                //logoGrande.visibility = View.GONE
                 siguiente.callOnClick()
                 anterior.callOnClick()
             }

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.gymapp.UserApplication.Companion.datos
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val registro = findViewById<Button>(R.id.botonRegister)
         val recordar = findViewById<Switch>(R.id.switchRecordarUsuario)
         val error = findViewById<TextView>(R.id.textoErrorLogin)
-
+        val database = Firebase.database("https://gym-proyect-dam-default-rtdb.europe-west1.firebasedatabase.app")
 
         email.setText(datos.getName())
         pass.setText(datos.getPass())
@@ -83,8 +84,16 @@ class MainActivity : AppCompatActivity() {
                                 var intent = Intent(this, TableActivityV2::class.java)
 
                                 if (email.text.contains("admin")) {
+
                                     adminmode = true
                                     intent = Intent(this, TableCreatorV2::class.java)
+                                }
+                                else{
+                                    database.reference.child("usuarios").child(saveuser).child("0").get().addOnSuccessListener {
+                                        if (it.value==null){
+                                            database.reference.child("usuarios").child(saveuser).setValue("")
+                                        }
+                                    }
                                 }
                                 startActivity(intent)
                             } else {
