@@ -16,8 +16,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
-
 class TableActivityV2 :AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -67,16 +65,13 @@ class TableActivityV2 :AppCompatActivity() {
             startActivity(intent)
         }
         //Pantalla de Carga
-        //logoGrande.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.Main).launch {
             delay(1000)
             if (!datoss){
                 nodata()
-                //logoGrande.visibility = View.GONE
                 siguiente.callOnClick()
                 ejernombre.visibility = View.VISIBLE
             }else {
-                //logoGrande.visibility = View.GONE
                 siguiente.callOnClick()
                 anterior.callOnClick()
             }
